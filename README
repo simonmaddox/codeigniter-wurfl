@@ -1,0 +1,32 @@
+CodeIgniter WURFL Wrapper Class
+
+Needs the WURFL API from:
+http://m.wurflpro.com/~wurfl/php/
+
+Put the WURFL directory into your libraries directory,
+either in your applications directory, or in the 
+main system directory.
+
+Put wurfl-config.xml into your application's config
+directory, and modify as needed.
+
+If you are using file storage as the caching method,
+you may need to make the cache directory set in
+wurfl-config.xml writable.
+
+You can use the following code:
+
+<?php
+$this->load->library('wurfl');
+$this->wurfl->load('USER_AGENT_HERE');
+?>
+
+You can also pass the $_SERVER variable to $this->wurfl->load()
+
+To get capabilities, you should do the following:
+$this->wurfl->getCapability('max_data_rate');
+OR
+$this->wurfl->getAllCapabilities();
+
+There are other methods available, which should be 
+fairly self explanatory.
