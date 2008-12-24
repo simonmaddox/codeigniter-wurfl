@@ -14,6 +14,9 @@ If you are using file storage as the caching method,
 you may need to make the cache directory set in
 wurfl-config.xml writable.
 
+You will also need to define where wurfl.xml and
+web_browsers_patch.xml are located.
+
 You can use the following code:
 
 <?php
